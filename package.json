@@ -37,7 +37,7 @@
     "type": "git",
     "url": "git+https://github.com/louis-young/static-boilerplate.git"
   },
-  "homepage": "https://bitbucket.org/FluidStudiosStaff/static-boilerplate#readme",
+  "homepage": "https://github.com/louis-young/static-boilerplate/blob/master/README.md",
   "devDependencies": {
     "eslint-config-prettier": "^4.3.0",
     "webpack-stream": "^5.2.1"
