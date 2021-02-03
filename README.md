@@ -51,10 +51,10 @@ Simply run any command in the project root directory such as:
 
 ## Architecture
 
-The root contains three directories:
+The root directory contains three subdirectories:
 
 - `configuration`
--
+
 - `node_modules`
 
 - `public`
@@ -63,7 +63,7 @@ The root contains three directories:
 
 `node_modules` can be ignored as they never need to be edited. They are automatically populated based on the dependencies when installed.
 
-`public` contains two directories:
+`public` contains two subdirectories:
 
 - `dist`
 
@@ -73,21 +73,21 @@ The root contains three directories:
 
 `src` contains the working source code.
 
-`src` contains three directories:
+`src` contains three subdirectories:
 
-- `assets` - contains all of the static assets used in the project such as images, videos, etc.
+- `assets` - contains all of the static assets used in the project such as images, icons, videos, etc.
 
-- `scripts` - contains your JavaScript (including frameworks and libraries which aren't included via CDN).
+- `scripts` - contains JavaScript scripts (including frameworks and libraries which aren't included via CDN).
 
 - `stylesheets` - contains the Sass architecture.
 
 ## Markup
 
-Markup is linted for code quality automatically for you. You can add as many markup files as you wish within the `src` directory. Subdirectories are supported.
+Markup is linted for code quality automatically. You can add as many markup files as you wish within the `src` directory. Subdirectories are supported.
 
 ## Scripts
 
-Scripts are linted automatically for you to ensure a high code standard and fewer errors at runtime.
+Scripts are linted automatically to ensure a high code standard and help to prevent fewer errors at runtime.
 
 The `scripts` directory should contains a `vendor` subdirectory if using frameworks and libraries that are not included via a CDN.
 
@@ -113,11 +113,11 @@ Every Sass file and partial is linted, compiled, minified, prefixed and bundled 
 
 ### JavaScript
 
-You can place multiple scripts in any of the scripts directories and import them in the `entry.js` file. These will all be bundled and processed for you.
+You can place multiple scripts in the `scripts` directory and import them in the `entry.js` file. These will all be bundled and processed automatically. Subdirectories are supported.
 
 ### Assets
 
-Static assets are automatically compressed/optimised and moved to the `dist` directory. This supports most common static asset file types and also supports subdirectories.
+Static assets are automatically compressed/optimised and moved to the `dist` directory. This supports most common static asset file types, and also supports subdirectories.
 
 If you remove an asset from `src`, it will automatically be removed from `dist`.
 
@@ -125,17 +125,17 @@ If you remove an asset from `src`, it will automatically be removed from `dist`.
 
 ### Linting
 
-All of your markup, Sass and JavaScript is automatically linted on change. The output will appear in the console and will prevent poor code, bad conventions and will help to lower the amount of silent/runtime errors.
+All of your markup, Sass and JavaScript is automatically linted on change. The output will appear in the console and will prevent poor code, bad convention, and will help to lower the amount of silent/runtime errors.
 
 This can also be run as a separate task by running `$ npm run lint`.
 
-The linters can be individually configured by editing the associated linter configuration file in the `configuration` directory.
+The linters can be independently configured by editing the associated linter configuration file in the `configuration` directory.
 
 ### Sourcemaps
 
 When using compilers and combining files, you need to keep track (a map) of where this code originated from. This helps immensely when debugging a project as you can see which file an error originated from, and view the associated source code.
 
-Simply use developer tools as you would usually, it's all handled for you.
+Simply use developer tools as you would usually, it's all handled automatically.
 
 ### Convention
 
