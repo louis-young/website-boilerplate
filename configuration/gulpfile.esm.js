@@ -2,26 +2,28 @@
  * Watch and handle workflow automation tasks.
  *
  * @author Louis Young
- * @version 1.2.0
+ * @version 4.0.0
  * @licence MIT
  */
 
-const gulp = require("gulp");
-const webpack = require("webpack-stream");
-const sass = require("gulp-sass");
-const eslint = require("gulp-eslint");
-const sassLint = require("gulp-sass-lint");
-const htmlLint = require("gulp-html-lint");
-const plumber = require("gulp-plumber");
-const autoprefixer = require("gulp-autoprefixer");
-const imagemin = require("gulp-imagemin");
-const sourcemaps = require("gulp-sourcemaps");
-const rename = require("gulp-rename");
-const del = require("del");
-const zip = require("gulp-zip");
-const log = require("fancy-log");
-const colour = require("ansi-colors");
-const browserSync = require("browser-sync").create();
+import gulp from "gulp";
+import webpack from "webpack-stream";
+import sass from "gulp-sass";
+import eslint from "gulp-eslint";
+import sassLint from "gulp-sass-lint";
+import htmlLint from "gulp-html-lint";
+import plumber from "gulp-plumber";
+import autoprefixer from "gulp-autoprefixer";
+import imagemin from "gulp-imagemin";
+import sourcemaps from "gulp-sourcemaps";
+import rename from "gulp-rename";
+import del from "del";
+import zip from "gulp-zip";
+import log from "fancy-log";
+import colour from "ansi-colors";
+import browserSync from "browser-sync";
+
+const browserSyncServer = browserSync.create();
 
 const paths = {
   src: "../public/src/",
@@ -67,7 +69,7 @@ const compileStyles = () => {
     )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(`${paths.dist}stylesheets/`))
-    .pipe(browserSync.stream());
+    .pipe(browserSyncServer.stream());
 };
 
 gulp.task("compileStyles", compileStyles);
@@ -230,7 +232,7 @@ const cleanAssets = () => {
 gulp.task("cleanAssets", cleanAssets);
 
 const server = () => {
-  browserSync.init({
+  browserSyncServer.init({
     server: paths.dist,
     notify: false,
     scrollProportionally: false,
@@ -287,12 +289,12 @@ gulp.task("compress", compress);
 gulp.task("package", gulp.series(["cleanBuild", "build", "compress", "lint"]));
 
 const reload = (callback) => {
-  browserSync.reload();
+  browserSyncServer.reload();
   callback();
 };
 
 const stream = (callback) => {
-  browserSync.stream();
+  browserSyncServer.stream();
   callback();
 };
 
