@@ -2,6 +2,8 @@
 
 A fast, scalable, modular static boilerplate for rapid front-end development.
 
+![# Static Boilerplate](documentation/static-boilerplate.svg)
+
 ## Features
 
 - Local development server.
