@@ -1,0 +1,46 @@
+{
+  "name": "static-boilerplate",
+  "dependencies": {
+    "ansi-colors": "^3.2.4",
+    "browser-sync": "^2.26.7",
+    "del": "^3.0.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-html-lint": "0.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^4.2.0",
+    "sass-lint": "1.12.1"
+  },
+  "scripts": {
+    "start": "gulp start --silent --gulpfile ./configuration/gulpfile.js",
+    "lint": "gulp lint --silent --gulpfile ./configuration/gulpfile.js",
+    "package": "gulp package --silent --gulpfile ./configuration/gulpfile.js"
+  },
+  "version": "4.0.0",
+  "main": "gulpfile.js",
+  "author": "Louis Young",
+  "license": "MIT",
+  "description": "A fast, scalable, modular static boilerplate for rapid front-end development.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louis-young/static-boilerplate.git"
+  },
+  "homepage": "https://bitbucket.org/FluidStudiosStaff/static-boilerplate#readme",
+  "devDependencies": {
+    "eslint-config-prettier": "^4.3.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "keywords": []
+}

@@ -1,0 +1,60 @@
+.section {
+  $self: &;
+  padding: 2rem 0;
+  background: $white;
+  @include tablet {
+    padding: 3rem 0;
+  }
+  @include laptop {
+    padding: 4rem 0;
+  }
+  @include desktop {
+    padding: 5rem 0;
+  }
+
+  &--dark {
+    background: $dark-background;
+    #{$self}__title,
+    #{$self}__text {
+      color: $light-text;
+    }
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--no-top {
+    padding-top: unset;
+  }
+
+  &--no-bottom {
+    padding-bottom: unset;
+  }
+
+  &--no-padding {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+
+  &__title {
+    padding-top: unset;
+    padding-bottom: 2rem;
+    @include tablet {
+      padding-bottom: 3rem;
+    }
+    @include laptop {
+      padding-bottom: 4rem;
+    }
+    @include desktop {
+      padding-bottom: 5rem;
+    }
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    color: $dark-text;
+  }
+}

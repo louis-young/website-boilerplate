@@ -1,0 +1,49 @@
+.toggle {
+  $self: &;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  position: relative;
+  padding: initial;
+  cursor: pointer;
+  border: unset;
+  transition: all 0.35s ease-in-out;
+  z-index: 4;
+  outline: none;
+  color: $dark-text;
+  @include laptop {
+    display: none;
+  }
+
+  &:before,
+  &:after,
+  &__line {
+    @extend %pseudo;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: $dark-text;
+    transition: all 0.25s ease-in-out;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    top: 100%;
+  }
+  &__line {
+    top: 50%;
+  }
+  &--open {
+    &:before {
+      transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    #{$self}__line {
+      opacity: 0;
+    }
+    &:after {
+      transform: rotate(45deg) translate(-10px, -11px);
+    }
+  }
+}

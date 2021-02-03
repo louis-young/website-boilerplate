@@ -1,0 +1,47 @@
+$ratio: 15%;
+
+$primary-color: hotpink;
+
+$primary-color-dark: darken($primary-color, $ratio);
+$primary-color-light: lighten($primary-color, $ratio);
+
+$secondary-color: lightsteelblue;
+
+$secondary-color-dark: darken($secondary-color, $ratio);
+$secondary-color-light: lighten($secondary-color, $ratio);
+
+$tertiary-color: darkslategrey;
+
+$tertiary-color-dark: darken($tertiary-color, $ratio);
+$tertiary-color-light: lighten($tertiary-color, $ratio);
+
+$light-background: #ffffff;
+$dark-background: #222b33;
+
+$shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+
+$overlay: rgba(0, 0, 0, 0.75);
+
+$round: 0.25rem;
+
+$red: #f44336;
+$pink: #e91e63;
+$purple: #9c27b0;
+$deep-purple: #673ab7;
+$indigo: #3f51b5;
+$blue: #2196f3;
+$light-blue: #03a9f4;
+$cyan: #00bcd4;
+$teal: #009688;
+$green: #4caf50;
+$light-green: #8bc34a;
+$lime: #cddc39;
+$yellow: #ffeb3b;
+$amber: #ffc107;
+$orange: #ff9800;
+$deep-orange: #ff5722;
+$brown: #795548;
+$grey: #9e9e9e;
+$blue-grey: #607d8b;
+$black: #000000;
+$white: #ffffff;

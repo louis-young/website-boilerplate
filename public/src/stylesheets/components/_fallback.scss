@@ -1,0 +1,47 @@
+.fallback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $light-background;
+  z-index: 2147000000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  @supports (grid-template-columns: 1fr) {
+    display: none;
+  }
+
+  &__logo {
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    color: $dark-text;
+    padding: 0.25rem 0;
+  }
+  &__content {
+    padding: 2rem;
+    @include laptop {
+      padding: 4rem;
+    }
+  }
+}
+
+.browsers {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .browser {
+    margin: 1rem;
+    @include laptop {
+      margin-bottom: 0;
+    }
+    &__title {
+      color: $dark-text;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+%pseudo {
+  content: "";
+  display: block;
+}
+
+%hover {
+  transition: 0.3s opacity;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+%round {
+  border-radius: $round;
+}
+
+%shadow {
+  box-shadow: $shadow;
+}

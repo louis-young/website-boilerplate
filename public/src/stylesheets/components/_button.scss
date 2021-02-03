@@ -1,0 +1,46 @@
+.button {
+  padding: 1rem 2.5rem;
+  background: $primary-color;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  text-align: center;
+  transition: background 0.2s ease-in-out;
+  &:hover {
+    background: $primary-color-dark;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  &--round {
+    @extend %round;
+  }
+  &--pill {
+    border-radius: 2.5rem;
+  }
+  &--secondary {
+    background: $secondary-color;
+    &:hover {
+      background: $secondary-color-dark;
+    }
+  }
+  &--tertiary {
+    background: $tertiary-color;
+    &:hover {
+      background: $tertiary-color-dark;
+    }
+  }
+  &--center {
+    margin: auto;
+    display: block;
+    width: fit-content;
+  }
+  &--spaced {
+    margin-top: 2rem;
+  }
+}

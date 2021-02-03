@@ -1,0 +1,11 @@
+@function z-index($selector) {
+  @return map-get($stack, $selector);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+$stack: (
+  "class": 2147000000,
+);
