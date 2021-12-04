@@ -86,4 +86,3 @@ You can place multiple scripts in any of the scripts directories and import them
 ### Assets
 
 Static assets are automatically compressed/optimised and moved to the `dist` directory. This supports most common static asset file types and also supports subdirectories.
-
