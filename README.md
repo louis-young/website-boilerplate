@@ -1,6 +1,6 @@
-﻿# Static Boilerplate
+# Website Boilerplate
 
-A fast, scalable, modular static boilerplate for rapid front-end development.
+A fast, scalable, modular static boilerplate for rapid front-end website development.
 
 ![# Static Boilerplate](documentation/static-boilerplate.svg)
 
@@ -30,133 +30,57 @@ These dependencies are already included for you (via CDN for performance).
 
 ## Setup
 
-**1. Clone the repository and install dependencies with NPM**
+1. Clone the repository and install with NPM
 
-To set up the static boilerplate, simply clone the git repository and run NPM install.
+To set up the project structure, simply clone the git repository and install NPM.
 
-```
-$ git clone https://github.com/louis-young/static-boilerplate.git
+```terminal
+$ git clone git@github.com:louis-young/website-boilerplate.git
 $ npm install
 ```
 
-**2. Run**
+2. Run
 
-Tasks:
+There are different tasks which you can run depending on your needs:
 
-- `$ npm start` - start the local development server and compile files.
+- `$ npm start` - start the local development server and live watch file changes.
 - `$ npm run lint` - lint scripts, stylesheets and markup.
-- `$ npm run package` - generate a production archive and directory for deployment.
+- `$ npm run package` - generate a production archive and directory which is ready to deploy.
 
 Simply run any command in the project root directory such as:
 
 `$ npm start`
 
-## Architecture
-
-The root directory contains three subdirectories:
-
-- `configuration`
-
-- `node_modules`
-
-- `public`
-
-`configuration` contains the configuration for the linters as well as the main Gulp file.
-
-`node_modules` can be ignored as they never need to be edited. They are automatically populated based on the dependencies when installed.
-
-`public` contains two subdirectories:
-
-- `dist`
-
-- `src`
-
-`dist` contains a compiled version of the source code/assets which is read-only (do not touch).
-
-`src` contains the working source code.
-
-`src` contains three subdirectories:
-
-- `assets` - contains all of the static assets used in the project such as images, icons, videos, etc.
-
-- `scripts` - contains JavaScript scripts (including frameworks and libraries which aren't included via CDN).
-
-- `stylesheets` - contains the Sass architecture.
-
-## Markup
-
-Markup is linted for code quality automatically. You can add as many markup files as you wish within the `src` directory. Subdirectories are supported.
-
-## Scripts
-
-Scripts are linted automatically to ensure a high code standard and help to prevent fewer errors at runtime.
-
-The `scripts` directory should contains a `vendor` subdirectory if using frameworks and libraries that are not included via a CDN.
-
-The `entry.js` file in located in the root of `scripts`.
-
-The JavaScript structure is as follows:
-
-- `public/src/scripts/entry.js` - The entry file for bundling.
-
-- `public/src/scripts/animation.js` - The file which instantiates the Animate On Scroll library.
-
-You can add as many files to the `scripts` directory as you wish and import them in `entry.js` and these will be bundled, transpiled and minified for production. Subdirectories are supported.
-
-## Stylesheets
+## Sass
 
 [https://sass-guidelin.es/#architecture](https://sass-guidelin.es/#architecture)
-
-## Compilation
-
-### Sass
-
-Every Sass file and partial is linted, compiled, minified, prefixed and bundled in to the `main.min.css` file.
-
-### JavaScript
-
-You can place multiple scripts in the `scripts` directory and import them in the `entry.js` file. These will all be bundled and processed automatically. Subdirectories are supported.
-
-### Assets
-
-Static assets are automatically compressed/optimised and moved to the `dist` directory. This supports most common static asset file types, and also supports subdirectories.
-
-If you remove an asset from `src`, it will automatically be removed from `dist`.
 
 ## Miscellaneous
 
 ### Linting
 
-All of your markup, Sass and JavaScript is automatically linted on change. The output will appear in the console and will prevent poor code, bad convention, and will help to lower the amount of silent/runtime errors.
+All of your markup, Sass and JavaScript is automatically linted on change. The output will appear in the console and will prevent poor code, bad convention and will lower the amount of silent/runtime errors.
 
 This can also be run as a separate task by running `$ npm run lint`.
 
-The linters can be independently configured by editing the associated linter configuration file in the `configuration` directory.
+These can be configured by editing the associated linter configuration file in the `configuration` directory.
 
 ### Sourcemaps
 
-When using compilers and combining files, you need to keep track (a map) of where this code originated from. This helps immensely when debugging a project as you can see which file an error originated from, and view the associated source code.
+When using compilers and combining files, you need to keep track (a map) of where this code originated from. This helps immensely when debugging a project as you can see which file an error/warning is being thrown from and view this as source code.
 
-Simply use developer tools as you would usually, it's all handled automatically.
+Simply use developer tools as you would usually, it's all handled for you.
 
-### Convention
+## Compilation
 
-#### BEM
+### Sass
 
-The boilerplate strictly enforces the Block Element Modifier [BEM](http://getbem.com/) methodology.
+Every Sass file and partial is linted, compiled, minified, prefixed and added in to the `main.min.css` file.
 
-#### ES6+
+### JavaScript
 
-The static boilerplate strictly enforces abiding by ES6+ convention. The source code is transpiled for production so you don't need to worry about browser targets.
+You can place multiple scripts in any of the scripts directories and import them in the `bundle.js` file. These will all be compiled and bundled in to the `bundle.min.js` file.
 
-### Browsers
+### Assets
 
-The static boilerplate is cutting edge, using a mix of the latest technologies. For this reason, it supports most modern browsers.
-
-Currently, the main browser target list is:
-
-1. Chrome
-2. Firefox
-3. Opera
-4. Safari
-5. Edge
+Static assets are automatically compressed/optimised and moved to the `dist` directory. This supports most common static asset file types and also supports subdirectories.
