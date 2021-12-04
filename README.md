@@ -2,7 +2,7 @@
 
 # Website Boilerplate
 
-A fast, scalable, modular static boilerplate for rapid front-end website development.
+A fast, scalable and modular boilerplate for rapid website development.
 
 ![# Static Boilerplate](documentation/static-boilerplate.svg)
 
